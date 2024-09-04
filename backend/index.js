@@ -8,7 +8,8 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-mongoose.connect('mongodb://127.0.0.1:27017/practice_mern');
+mongoose.connect('mongodb+srv://hasanmuzammil12:woy2CVpxWoFwOqBE@cluster0.lcg6psv.mongodb.net/authentication')
+.then(() => console.log('connected'));
 
 app.post('/register', (req, res)=>{
     // To post / insert data into database
@@ -50,6 +51,6 @@ app.post('/login', (req, res)=>{
 })
 
 app.listen(3001, () => {
-    console.log("Server listining on http://127.0.0.1:3001");
+    console.log("Server listining on http://localhost:3001");
 
 });
